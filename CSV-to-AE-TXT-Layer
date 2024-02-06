@@ -6,11 +6,11 @@ var end = csv.indexOf("-Першкін-");
 var text = csv.substring(start, end);
 // Видалити пробіли на початку кожного рядка
 text = text.replace(/^\s+/gm, "");
-// Розбити текст на рядки по 73 символів, шукаючи пробіл після 60 символу або знак пунктуації після 73 символу
+// Розбити текст на рядки по 74 символів, шукаючи пробіл після 60 символу або знак пунктуації після 74 символу
 var lines = [];
-var lineLength = 73;
+var lineLength = 74;
 var breakPoint = 66;
-var punctuation = ".,!?"; // знаки пунктуації
+var punctuation = ".,!?\\\""; // знаки пунктуації
 var i = 0;
 while (i < text.length) {
   var j = text.indexOf(" ", breakPoint + i); // знайти пробіл між breakPoint і lineLength
